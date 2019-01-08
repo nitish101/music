@@ -83,6 +83,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -107,6 +110,7 @@
     <option name="width" value="697" />
     <option name="height" value="775" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -252,12 +256,12 @@
       <workItem from="1546844154600" duration="2190000" />
       <workItem from="1546848006841" duration="6996000" />
       <workItem from="1546936619670" duration="5807000" />
-      <workItem from="1546950594042" duration="4523000" />
+      <workItem from="1546950594042" duration="5123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49348000" />
+    <option name="totallyTimeSpent" value="49948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
