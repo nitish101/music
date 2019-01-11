@@ -1,24 +1,27 @@
+{% extends 'music/base.html' %}
+{% block title %}Album Details{% endblock %}
 
-<img src="{{ albums.album_logo }}"/>
+{% block body %}
+    <img src="{{ albums.album_logo.url }}", alt = "Size is larger than expected"/>
 
-<h1>{{ albums.album_title }}</h1>>
-<h2>{{ albums.artist }}</h2>
+    <h1>{{ albums.album_title }}</h1>>
+    <h2>{{ albums.artist }}</h2>
 
-{% if error_message %}
-    <p><strong>{{ error_message }}</strong></p>
-{% endif %}
 
-<form action="{% url 'Music:favorite' album.id %}" method="post">
-    {% csrf_token %}
-    {% for song in album.song_set.all %}
-        <input type="radio" id="song{{ forloop.counter }}" name="song" value="{{ song.id }}" />
-        <label for="song{{ forloop.counter }}">
-            {{ song.song_title }}
-            {% if song.is_favorite %}
-                <img src="http://i.imgur.com/b9b13Rd.png" />
-            {% endif %}
-        </label><br>
-    {% endfor %}
-    <input type="submit" value="favorite">
-</form>
+
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+
+    <form action="{% url 'Music:detail' albums.id %}" method="post">
+        {% csrf_token %}
+        {% for song in albums.song_set.all %}
+
+            <label for="song{{ forloop.counter }}">
+                <li>{{ song.song_title }}</li>
+            </label><br>
+        {% endfor %}
+    </form>
+{% endblock %}
+
 
