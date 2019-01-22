@@ -15,10 +15,17 @@ class Albums(models.Model):
         return self.album_title + ' - ' + self.artist
 
 
+class Playlist(models.Model):
+
+
+
+
+
 class Song(models.Model):
     album = models.ForeignKey(Albums, on_delete=models.CASCADE)
     file_key = models.CharField(max_length=100)
-    song_title = models.CharField(max_length=250) 
-    
+    song_title = models.CharField(max_length=250)
+
+
     def __str__(self):
         return self.song_title
